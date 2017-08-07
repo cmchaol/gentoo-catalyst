@@ -8,6 +8,17 @@
 
 ** v.2
 
+add .dockerignore
+
+M-x magit-tag
+
+v.2
+
+#+HEADER:  :tangle .dockerignore
+#+BEGIN_SRC sh
+*.org
+#+END_SRC
+
 
 ** v.1
 
