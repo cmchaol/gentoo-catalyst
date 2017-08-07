@@ -1,0 +1,30 @@
+* Dockerfile 
+
+| publishing                                |
+|-------------------------------------------|
+| place the cursor inside the source block |
+|                                           |
+| C-u C-c C-v t                             |
+
+
+** v.1
+
+#+HEADER:  :tangle Dockerfile
+#+BEGIN_SRC sh
+FROM gentoo/stage3-amd64
+
+RUN mkdir /usr/portage; \
+    emerge-webrsync; \
+    emerge dev-util/catalyst
+#+END_SRC
+
+
+* reference
+
+https://github.com/cmchaol/gentoo-catalyst
+
+
+https://hub.docker.com/r/pallavagarwal07/gentoo-stabilization/~/dockerfile/
+
+
+https://gitweb.gentoo.org/proj/releng.git/plain/releases/weekly/specs/amd64/hardened/stage4-minimal.spec
