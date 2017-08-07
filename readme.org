@@ -10,10 +10,6 @@
 
 add .dockerignore
 
-M-x magit-tag
-
-v.2
-
 #+HEADER:  :tangle .dockerignore
 #+BEGIN_SRC sh
 *.org
