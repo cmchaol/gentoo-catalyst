@@ -6,6 +6,33 @@
 |                                           |
 | C-u C-c C-v t                             |
 
+** v.3
+
+#+HEADER:  :tangle Dockerfile
+#+BEGIN_SRC sh
+FROM gentoo/stage3-amd64-hardened
+
+RUN mkdir /usr/portage; \
+    emerge-webrsync; \
+    emerge dev-util/catalyst; \
+    rm -rf `ls -1A | grep -vP '^profiles'`; \
+
+#+END_SRC
+
+
+| publishing the above block |
+| C-u C-c C-v t              |
+|                            |
+| M-x magit-tag              |
+|                            |
+| git push master            |
+|                            |
+| git push a tag             |
+|                            |
+| observing autmoated build  |
+
+
+
 ** v.2
 
 add .dockerignore
